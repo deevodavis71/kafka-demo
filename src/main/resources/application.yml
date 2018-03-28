@@ -1,0 +1,13 @@
+server:
+  port: 17000
+
+kafka-demo:
+  ok-queue: kafka-handler-a
+  error-queue: kafka-error-a
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      auto-offset-reset: earliest
+      group-id: eve-calc-app # boot-${server.port}   # to make it unique
